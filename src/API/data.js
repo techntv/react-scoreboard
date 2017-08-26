@@ -2,11 +2,13 @@
 const PLAYERS = [
     {
         name: "Jim Hoskins",
-        score: 31
+        score: 31,
+        id: 1
     },
     {
         name: "Anna Sharaopa",
-        score: 35
+        score: 35,
+        id: 2
     }
 ];
 
