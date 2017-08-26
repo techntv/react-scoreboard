@@ -17,7 +17,8 @@ class Player extends React.Component{
                         </div>
 
                         <div className="player-score">
-                            <Counter score={this.props.score}/>
+                            <Counter score={this.props.score}
+                                     changeScore={this.props.onChangeScore}/>
                         </div>
             </div>
         )

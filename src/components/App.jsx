@@ -10,6 +10,11 @@ class App extends React.Component {
             players : dataplayer
         }
     }
+    onChangeScore(index,data){
+        console.log('Change',index,data);
+        this.state.players[index].score += data;
+        this.setState(this.state);
+    }
     render(){
         return(
             <div className="application">
@@ -17,8 +22,10 @@ class App extends React.Component {
 
                <div className="players">
                 {
-                    this.state.players.map(item => {
-                       return <Player key={item.id} {...item}/>
+                    this.state.players.map((item,index) => {
+                       return <Player key={item.id} 
+                                      {...item}
+                                      onChangeScore={data => this.onChangeScore(index,data)}/>
                     })
                 }
                 </div>    
