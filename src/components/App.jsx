@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header.jsx';
 import Player from './Player.jsx';
 import dataplayer from '../API/data.js';
-
+import AddPlayerForm from './AddPlayerForm.jsx';
 class App extends React.Component {
     constructor(props){
         super(props)
@@ -18,7 +18,7 @@ class App extends React.Component {
     render(){
         return(
             <div className="application">
-               <Header title={this.props.title}/>
+               <Header title={this.props.title} players={this.state.players}/>
 
                <div className="players">
                 {
@@ -29,6 +29,7 @@ class App extends React.Component {
                     })
                 }
                 </div>    
+                <AddPlayerForm />
             </div>
         );
     }
